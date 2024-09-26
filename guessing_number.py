@@ -1,4 +1,8 @@
 import random
+from art import logo
+
+
+print(logo)
 
 print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100.")
@@ -22,6 +26,10 @@ if difficulty == 'easy':
             attemps = attemps -1
         else:
             print("You put a wrong input, try again.")
+
+    if attemps == 0:
+        print(f"You lose. The answer is {random_number}")
+
 elif difficulty == 'hard':
     # Attemps
     attemps = 5
@@ -39,6 +47,9 @@ elif difficulty == 'hard':
             attemps = attemps -1
         else:
             print("You put a wrong input, try again.")
+    if attemps == 0:
+        print(f"You lose. The answer is {random_number}")
+
 else:
     print("You chose a wrong world try again.")
 
